@@ -4,19 +4,14 @@ import React from 'react';
 const Services: React.FC = () => {
   const servicesList = [
     {
-      title: "Valutazione Osteopatica Iniziale",
+      title: "Check Up Osteopatico",
       duration: "60 min",
       desc: "Un'analisi approfondita della tua storia clinica, test posturali e mobilità articolare, seguiti dal primo trattamento mirato."
     },
     {
-      title: "Trattamento Osteopatico Correttivo",
-      duration: "45 min",
+      title: "Trattamenti Osteopatici Personalizzato",
+      duration: "45-60 min",
       desc: "Sedute successive focalizzate sulla risoluzione di disfunzioni specifiche, riequilibrio strutturale e rilascio miofasciale."
-    },
-    {
-      title: "Osteopatia Pediatrica e Gravidanza",
-      duration: "45 min",
-      desc: "Trattamenti dolci per accompagnare il corpo durante la maternità e supportare la crescita armoniosa dei più piccoli."
     }
   ];
 

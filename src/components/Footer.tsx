@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
             <Link to="/cookie" className="hover:text-studio-accent transition-colors">
               Cookie Policy
             </Link>
-          <span className="text-studio-dark/30">P.IVA 12345678901</span>
+          <span className="text-studio-dark/30">P.IVA 05481990264</span>
           </div>
         </div>
 
