@@ -1,25 +1,19 @@
 // src/App.tsx
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-// import Values from './components/Values';
-import AboutOsteopathy from './components/AboutOsteopathy';
-import Services from './components/Services';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+// import CookiePolicy from './pages/CookiePolicy';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="min-h-screen bg-studio-bg font-montserrat antialiased">
-      <Header />
-      
-      <main>
-        <Hero />
-        <AboutOsteopathy />
-        <Services />
-        <Footer />
-      </main>
-    </div>
+    <Router basename="/StudioLeonardo">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/cookie" element={<PrivacyPolicy />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;

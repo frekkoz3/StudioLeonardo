@@ -1,10 +1,72 @@
 // src/components/AboutOsteopathy.tsx
-import React, { useState } from 'react';
-import aboutBg from '../assets/images/body-massage.jpeg'
+import React, { useState, useEffect, useCallback } from 'react';
+import bodyMsg from '../assets/images/body-massage.jpeg';
+import faceMsg from '../assets/images/facial-massage.jpg';
+import fisheyeMsg from '../assets/images/massage1.jpg';
+import lowerMsg from '../assets/images/massage3.jpg';
+import neckMsg from '../assets/images/massage2.jpg';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const AboutOsteopathy: React.FC = () => {
   // Track which item is currently open. We default to the first item (index 0).
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+  { 
+    loop: true, 
+    duration: 60,
+  }, 
+  [
+    Autoplay({ 
+      delay: 4000, // 8 seconds of "focus" before changing
+      stopOnInteraction: false,
+      stopOnMouseEnter: true  // Pauses on hover—perfect for a medical studio vibe
+    })
+  ]
+);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setActiveIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const autoplay = emblaApi.plugins().autoplay;
+    if (!autoplay) return;
+
+    // Function to resume
+    const resumeAutoplay = () => {
+      // Check if the carousel is still 'paused' (optional safety check)
+      // We explicitly tell it to start playing again
+      autoplay.play();
+    };
+
+    // Interaction handlers
+    const onPointerDown = () => autoplay.stop();
+    const onPointerUp = () => {
+      // Start the timer to resume after 10 seconds of inactivity
+      setTimeout(resumeAutoplay, 10000);
+    };
+
+    emblaApi.on('pointerDown', onPointerDown);
+    emblaApi.on('pointerUp', onPointerUp);
+
+    return () => {
+      emblaApi.off('pointerDown', onPointerDown);
+      emblaApi.off('pointerUp', onPointerUp);
+    };
+  }, [emblaApi]);
+
+  const galleryImages = [
+    bodyMsg,
+    faceMsg,
+    lowerMsg,
+    neckMsg,
+    fisheyeMsg,
+  ];
 
   const indications = [
     {
@@ -33,16 +95,24 @@ const AboutOsteopathy: React.FC = () => {
     <section className="bg-studio-bg py-20 px-6 md:px-12 lg:px-24 border-t border-studio-dark/5">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        {/* Right Column: Image with Floating Offset Frame */}
+        {/* Right Column: Image Carousel with Floating Offset Frame */}
         <div className="lg:col-span-7 relative group">
+
           <div className="absolute -bottom-4 -left-4 w-full h-full border border-studio-accent/30 rounded-sm translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 ease-out z-0" />
           
-          <div className="relative overflow-hidden rounded-sm aspect-[4/5] z-10 shadow-lg">
-            <img 
-              src={aboutBg}
-              alt="Dettaglio di un trattamento osteopatico" 
-              className="w-full h-full object-cover filter grayscale-[10%] contrast-[105%] hover:scale-105 transition-transform duration-700 ease-out"
-            />
+          {/* Carousel */}
+          <div className="relative overflow-hidden rounded-sm aspect-[4/5] z-10 shadow-lg cursor-grab active:cursor-grabbing" ref={emblaRef}>
+            <div className="flex h-full">
+              {galleryImages.map((src, index) => (
+                <div className="flex-[0_0_100%] min-w-0 relative" key={index}>
+                  <img 
+                    src={src} 
+                    alt={`Immagine ${index + 1} dello Studio Leonardo`} 
+                    className="w-full h-full object-cover filter grayscale-[10%] contrast-[105%] transition-opacity duration-1000 ease-in-out"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

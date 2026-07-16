@@ -1,6 +1,6 @@
 // src/components/Hero.tsx
 import React from 'react';
-import heroBg from '../assets/images/massage-table.jpeg';
+import heroBg from '../assets/images/massage-table.png';
 
 const Hero: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           className="w-full h-full object-cover object-center opacity-90"
         />
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-studio-bg)_0%,_transparent_100%)] md:bg-[radial-gradient(circle_at_25%_50%,_var(--color-studio-bg)_20%,_transparent_65%)] z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-studio-bg to-transparent to-55% z-10" />
       </div>
 
       <div className="relative z-10 px-6 md:px-16 lg:px-24 max-w-3xl">

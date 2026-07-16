@@ -1,5 +1,6 @@
 // src/components/Footer.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -77,9 +78,13 @@ const Footer: React.FC = () => {
             &copy; {currentYear} Studio Leonardo. Tutti i diritti riservati.
           </p>
           <div className="flex gap-6 font-montserrat text-xs text-studio-dark/60">
-            <a href="#privacy" className="hover:text-studio-accent transition-colors">Privacy Policy</a>
-            <a href="#cookies" className="hover:text-studio-accent transition-colors">Cookie Policy</a>
-            <span className="text-studio-dark/30">P.IVA 12345678901</span>
+            <Link to="/privacy" className="hover:text-studio-accent transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/cookie" className="hover:text-studio-accent transition-colors">
+              Cookie Policy
+            </Link>
+          <span className="text-studio-dark/30">P.IVA 12345678901</span>
           </div>
         </div>
 
