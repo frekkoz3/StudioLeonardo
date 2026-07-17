@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
           
           {/* Brand/Identity Column (Spans 5 cols on desktop) */}
           <div className="md:col-span-5 space-y-4">
-            <h2 className="font-albertus text-2xl tracking-wider text-studio-dark uppercase">
+            <h2 className="font-agatho text-2xl tracking-wider text-studio-dark uppercase">
               Studio Leonardo
             </h2>
             <p className="font-montserrat text-xs md:text-sm text-studio-dark/70 max-w-sm leading-relaxed">
