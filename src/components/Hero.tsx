@@ -1,6 +1,6 @@
 // src/components/Hero.tsx
 import React from 'react';
-import heroBg from '../assets/images/massage-table.png';
+import heroBg from '../assets/images/massage-table.jpeg';
 
 const Hero: React.FC = () => {
   return (
