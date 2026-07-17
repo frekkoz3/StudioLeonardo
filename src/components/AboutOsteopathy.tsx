@@ -1,5 +1,5 @@
 // src/components/AboutOsteopathy.tsx
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect} from 'react';
 import bodyMsg from '../assets/images/body-massage.jpeg';
 import faceMsg from '../assets/images/facial-massage.jpg';
 import fisheyeMsg from '../assets/images/massage1.jpg';
