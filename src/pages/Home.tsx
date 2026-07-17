@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 // import Values from './components/Values';
 import AboutOsteopathy from '../components/AboutOsteopathy';
 import Services from '../components/Services';
-import Footer from '../components/Footer'; 
+import Contact from '../components/Contact'; 
 
 const Home: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         <AboutOsteopathy />
         <Services />
       </main>
-      <Footer />
+      <Contact />
     </div>
   );
 };
