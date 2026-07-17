@@ -28,9 +28,14 @@ const Contact: React.FC = () => {
             <ul className="space-y-3 font-montserrat text-sm text-studio-dark/80">
               <li className="flex items-center gap-2">
                 <span>📍</span>
-                <span className="hover:text-studio-accent transition-colors">
+                <a 
+                  href="https://maps.app.goo.gl/Y9beBGNdb6SwkHoZ6" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-studio-accent transition-colors"
+                >
                   Strada Sant'Angelo 9 - Treviso (TV)
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <span>📞</span>
