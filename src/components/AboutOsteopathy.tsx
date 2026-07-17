@@ -26,11 +26,6 @@ const AboutOsteopathy: React.FC = () => {
   ]
 );
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setActiveIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
   useEffect(() => {
     if (!emblaApi) return;
 

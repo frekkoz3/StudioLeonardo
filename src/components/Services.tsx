@@ -9,7 +9,7 @@ const Services: React.FC = () => {
       desc: "Un'analisi approfondita della tua storia clinica, test posturali e mobilità articolare, seguiti dal primo trattamento mirato."
     },
     {
-      title: "Trattamenti Osteopatici Personalizzato",
+      title: "Trattamenti Osteopatici Personalizzati",
       duration: "45-60 min",
       desc: "Sedute successive focalizzate sulla risoluzione di disfunzioni specifiche, riequilibrio strutturale e rilascio miofasciale."
     }
@@ -62,11 +62,11 @@ const Services: React.FC = () => {
         </div>
 
         {/* Call to Action*/}
-        {/*<div className="mt-16 self-center">
+        <div className="mt-16 self-center">
           <a href="#contatti" className="inline-block bg-studio-accent text-studio-dark font-montserrat text-sm uppercase tracking-wider px-8 py-4 rounded-sm hover:bg-studio-bg transition-colors duration-300 shadow-md">
             Prenota una prima visita
           </a>
-        </div>*/}
+        </div>
 
       </div>
     </section>
