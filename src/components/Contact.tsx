@@ -4,11 +4,11 @@ import React from 'react';
 const Contact: React.FC = () => {
 
   return (
-    <footer className="bg-studio-bg text-studio-dark border-t border-studio-dark/10 pt-16 pb-8 px-6 md:px-12 lg:px-24">
+    <section className="bg-studio-bg text-studio-dark pt-16 pb-0 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
         
         {/* Main Grid Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-0">
           
           {/* Brand/Identity Column (Spans 5 cols on desktop) */}
           <div className="md:col-span-5 space-y-4">
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
         </div>
         </div>
 
-    </footer>
+    </section>
   );
 };
 
