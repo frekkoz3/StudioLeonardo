@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <span className="font-cormorant text-[10px] sm:text-xs tracking-[0.3em] font-bold uppercase mb-1">
           Studio
         </span>
-        <h1 className="font-albertus text-3xl sm:text-4xl tracking-wide">
+        <h1 className="font-agatho text-3xl sm:text-4xl tracking-wide">
           LEONARDO
         </h1>
         <span className="font-cormorant text-[10px] sm:text-xs tracking-[0.3em] font-semibold uppercase mt-1">

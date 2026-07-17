@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        agatho: ['"Agatho"', 'serif'],
         albertus: ['"Albertus Nova"', 'serif'],
         cormorant: ['"Cormorant Garamond"', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
