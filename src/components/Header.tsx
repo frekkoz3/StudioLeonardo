@@ -17,11 +17,11 @@ const Header: React.FC = () => {
         </span>
       </div>
 
-      <button aria-label="Open menu" className="p-2 focus:outline-none hover:opacity-70 transition-opacity">
+      {/*<button aria-label="Open menu" className="p-2 focus:outline-none hover:opacity-70 transition-opacity">
         <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M3 6h18M3 12h18M3 18h18" />
         </svg>
-      </button>
+      </button>*/}
 
     </header>
   );

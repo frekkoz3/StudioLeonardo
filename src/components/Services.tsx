@@ -61,12 +61,12 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* Call to Action*/}
+        {/* Call to Action
         <div className="mt-16 self-center">
           <a href="#contatti" className="inline-block bg-studio-accent text-studio-dark font-montserrat text-sm uppercase tracking-wider px-8 py-4 rounded-sm hover:bg-studio-bg transition-colors duration-300 shadow-md">
             Prenota una prima visita
           </a>
-        </div>
+        </div>*/}
 
       </div>
     </section>
